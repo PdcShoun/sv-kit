@@ -37,7 +37,6 @@
 					</label>
 					<input
 						name="email"
-						type="email"
 						placeholder="email"
 						class="input input-bordered"
 						required
