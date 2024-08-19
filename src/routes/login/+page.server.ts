@@ -1,6 +1,5 @@
-import { error, redirect } from '@sveltejs/kit'
+import { redirect } from '@sveltejs/kit'
 import type { Actions } from './$types'
-import { handleError } from '$lib/utils/handleError'
 
 export const actions = {
 	default: async ({ request, url, cookies, fetch }) => {
