@@ -12,13 +12,13 @@
 				quasi. In deleniti eaque aut repudiandae et a id nisi.
 			</p>
 		</div>
-		<div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+		<div class="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
 			<form class="card-body" method="POST" action="/login">
 				{#if form?.error}
 					<div role="alert" class="alert alert-error">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							class="stroke-current shrink-0 h-6 w-6"
+							class="h-6 w-6 shrink-0 stroke-current"
 							fill="none"
 							viewBox="0 0 24 24"
 							><path
@@ -35,12 +35,7 @@
 					<label for="email" class="label">
 						<span class="label-text">Email</span>
 					</label>
-					<input
-						name="email"
-						placeholder="email"
-						class="input input-bordered"
-						required
-					/>
+					<input name="email" placeholder="email" class="input input-bordered" required />
 				</div>
 				<div class="form-control">
 					<label for="password" class="label">
