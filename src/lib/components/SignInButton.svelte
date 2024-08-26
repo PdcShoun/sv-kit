@@ -1,4 +1,4 @@
-<a href="/login" class="mr-1 flex h-12 items-center gap-2 rounded-full px-4 hover:bg-base-200">
+<a href="/login" class="hover:bg-base-200 mr-1 flex h-12 items-center gap-2 rounded-full px-4">
 	<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
 		><g
 			fill="none"

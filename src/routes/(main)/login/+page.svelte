@@ -3,7 +3,7 @@
 	export let form: ActionData
 </script>
 
-<div class="hero min-h-screen bg-base-100">
+<div class="hero bg-base-100 min-h-screen">
 	<div class="hero-content flex-col lg:flex-row-reverse">
 		<div class="text-center lg:text-left">
 			<h1 class="text-5xl font-bold">Login now!</h1>
@@ -12,7 +12,7 @@
 				quasi. In deleniti eaque aut repudiandae et a id nisi.
 			</p>
 		</div>
-		<div class="card w-full max-w-sm shrink-0 bg-base-100 shadow-2xl">
+		<div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
 			<form class="card-body" method="POST" action="/login">
 				{#if form?.error}
 					<div role="alert" class="alert alert-error">
