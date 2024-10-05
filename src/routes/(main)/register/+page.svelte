@@ -9,8 +9,8 @@
 </script>
 
 <form action="?/register" method="POST">
-	{#if form?.issues}
-		{form.issues}
+	{#if form?.invalid}
+		{form.invalid}
 	{/if}
 	<Card.Root class="mx-auto max-w-sm">
 		<Card.Header>
