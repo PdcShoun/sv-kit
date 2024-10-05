@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button';
+	import { Button } from '$lib/components/ui/button'
 
-	let count = $state(0);
+	let count = $state(0)
 </script>
 
 <h1>Welcome to SvelteKit</h1>
