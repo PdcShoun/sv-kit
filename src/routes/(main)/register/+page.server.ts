@@ -1,26 +1,33 @@
 import { fail, redirect } from '@sveltejs/kit'
 import type { Action, Actions, PageServerLoad } from './$types'
+import { z } from 'zod'
+
+const RegisterSchema = z.object({
+	firstName: z.string().min(1),
+	lastName: z.string().min(1),
+	email: z.string().email(),
+	password: z.string().min(1),
+})
 
 export const load: PageServerLoad = async () => {
 	// todo
 }
 
-const register: Action = async ({ request }) => {
-	const data = await request.formData()
-	const username = data.get('username')
-	const password = data.get('password')
+export const actions = {
+	register: async ({ request }) => {
+		const data = await request.formData()
+		const registerData = RegisterSchema.safeParse(Object.fromEntries(data))
 
-	if (typeof username !== 'string' || typeof password !== 'string' || !username || !password) {
-		return fail(400, { invalid: true })
-	}
+		if (!registerData.success) {
+			return fail(400, { invalid: registerData.error.issues })
+		}
 
-	const user = false
+		const user = true
 
-	if (user) {
-		return fail(400, { user: true })
-	}
-
-	redirect(303, '/login')
-}
-
-export const actions: Actions = { register }
+		console.log(registerData.data)
+		if (user) {
+			return fail(400, { userExist: true })
+		}
+		redirect(303, '/login')
+	},
+} satisfies Actions
