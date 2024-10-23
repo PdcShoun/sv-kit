@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button/index.js'
-	import * as Card from '$lib/components/ui/card/index.js'
-	import { Checkbox } from '$lib/components/ui/checkbox/index.js'
-	import { Input } from '$lib/components/ui/input/index.js'
+	import { Button } from '$lib/components/ui/button/index'
+	import * as Card from '$lib/components/ui/card/index'
+	import { Checkbox } from '$lib/components/ui/checkbox/index'
+	import { Input } from '$lib/components/ui/input/index'
 
 	import NavBar from '$lib/components/layout/NavBar.svelte'
 </script>
